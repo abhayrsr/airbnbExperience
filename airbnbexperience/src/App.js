@@ -1,13 +1,30 @@
 import './App.css';
 import Nav from "./Nav.js";
 import Card from "./card";
+import set from "./data";
+import React from 'react';
+
 
 function App() {
+  const cards = set.map(item => {
+    return (
+        <Card 
+            img={item.coverImg}
+            rating={item.stats.rating}
+            reviewCount={item.stats.reviewCount}
+            location={item.location}
+            title={item.title}
+            price={item.price}
+        />
+    )
+})       
+
   return (
     <div>
       <Nav />
-      <Card 
-        img = "./public/images/image 12.png"
+      {cards}
+      {/* <Card 
+        img = "./src/image 12.png"
         rating = "5.0"
         reviewCount = "(6)"
         country = ".USA"
@@ -15,7 +32,7 @@ function App() {
         price = "$136"/>
 
       <Card 
-        img = "./public/images/image 12.png"
+        img = "./src/wedding-photography.png"
         rating = "5.0"
         reviewCount = "(6)"
         country = ".USA"
@@ -23,12 +40,12 @@ function App() {
         price = "$136"/>
 
       <Card 
-        img = "./public/images/image 12.png"
+        img = "./src/mountain-bike 1.png"
         rating = "5.0"
         reviewCount = "(6)"
         country = ".USA"
         title = "Life lessons with Katie Zaferes "
-        price = "$136"/>
+        price = "$136"/> */}
       {/* <nav className = "App">
         <img src = {logo} className = "App-logo" alt = "logo" />
       </nav> */}
