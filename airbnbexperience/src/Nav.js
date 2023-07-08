@@ -1,5 +1,5 @@
 import React from "react"
-import logo from './public/images/airbnb 1.svg';
+import logo from './airbnb 1.svg';
 export default function Nav(){
     return (
         <nav className = "App">
