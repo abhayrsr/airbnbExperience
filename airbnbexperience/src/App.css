@@ -16,16 +16,22 @@
 }
 
 .card-container{
-  margin-right: 1rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  display: inline-block;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  
 }
 
 .card{
   font-size: 15px;
   line-height: 0.6rem;
   padding: 0.5rem;
+  flex: 0 0 calc(33.33% - 1rem); /* Adjust the width as needed */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; /* Optional margin between cards */
+  
 }
 
 .star--image{
@@ -42,6 +48,26 @@
   padding: 0.3rem;
   display:flex;
   margin-top: 0.2rem;
+  
+}
+/* ADD */
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
+.card--star {
+  height: 14px;
+}
+
+/* ADD */
+.card--price {
+  margin-top: auto;
 }
 
 /* .App-logo {
